@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5rem;
+    color: #222;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.btns a{
+    display: block;
+    text-transform: uppercase;
+    margin: 50px 0;
+    position: relative;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.cta-btn01{
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-image: linear-gradient(45deg,#4268dd 0%, #c750c7 45%, #ffcc80 100%);
+    background-size: 100%;
+    color: #ffffff;
+}
+
+.cta-btn01::before{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg,#4268dd 0%, #c750c7 45%, #ffcc80 100%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.3;
+    display: none;
+}
+
+.cta-btn01:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn01:hover::before{
+    transform: scale(5);
+}
+
+.cta-btn02{
+    
+}
+
+.cta-btn02::before,
+.cta-btn01::after{
+    transition: 0.3;
+}
+
+.cta-btn02::before{
+    left: 0;
+}
+
+.cta-btn02::after{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000000;
+    top: 0;
+    left: 0;
+}
+
+.cta-btn02:hover::before{
+    transform: translate(-5px, -5px);
+}
+
+.cta-btn01:hover::after{
+    transform: translate(5px,5px);
+}
